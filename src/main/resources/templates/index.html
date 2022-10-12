@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>welcome-maverick</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -495,9 +495,9 @@
       </li><!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
+        <a class="nav-link collapsed" th:href="@{client}">
           <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
+          <span>Client</span>
         </a>
       </li><!-- End Blank Page Nav -->
 

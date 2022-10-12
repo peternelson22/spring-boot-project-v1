@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Breadcrumbs - NiceAdmin Bootstrap Template</title>
+  <title>client</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -281,10 +281,10 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link " data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="components-alerts.html">
               <i class="bi bi-circle"></i><span>Alerts</span>
@@ -301,7 +301,7 @@
             </a>
           </li>
           <li>
-            <a href="components-breadcrumbs.html" class="active">
+            <a href="components-breadcrumbs.html">
               <i class="bi bi-circle"></i><span>Breadcrumbs</span>
             </a>
           </li>
@@ -495,9 +495,9 @@
       </li><!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
+        <a class="nav-link " th:href="@{client.html}">
           <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
+          <span>Client</span>
         </a>
       </li><!-- End Blank Page Nav -->
 
@@ -508,12 +508,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Breadcrumbs</h1>
+      <h1>Blank Page</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Components</li>
-          <li class="breadcrumb-item active">Breadcrumbs</li>
+          <li class="breadcrumb-item">Pages</li>
+          <li class="breadcrumb-item active">Blank</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -524,57 +524,8 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Default Breadcrumbs</h5>
-
-              <nav>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Default</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Centered</h5>
-
-              <nav class="d-flex justify-content-center">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Centered Position</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Right Positioned</h5>
-
-              <nav class="d-flex justify-content-end">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Right Position</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">With Home Icon</h5>
-
-              <nav>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Default</li>
-                </ol>
-              </nav>
+              <h5 class="card-title">Example Card</h5>
+              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
             </div>
           </div>
 
@@ -584,66 +535,8 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Breadcrumbs with a page title</h5>
-
-              <div class="pagetitle">
-                <h1>Page Title</h1>
-                <nav>
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item">Components</li>
-                    <li class="breadcrumb-item active">Breadcrumbs</li>
-                  </ol>
-                </nav>
-              </div><!-- End Breadcrumbs with a page title -->
-
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Breadcrumbs with different dividers</h5>
-
-              <nav style="--bs-breadcrumb-divider: '>';">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Data</li>
-                </ol>
-              </nav>
-
-              <nav style="--bs-breadcrumb-divider: '|';">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Data</li>
-                </ol>
-              </nav>
-
-              <nav style="--bs-breadcrumb-divider: '-';">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Data</li>
-                </ol>
-              </nav>
-
-              <nav style="--bs-breadcrumb-divider: '•';">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Data</li>
-                </ol>
-              </nav>
-
-              <nav style="--bs-breadcrumb-divider: '';">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active">Data</li>
-                </ol>
-              </nav>
-
+              <h5 class="card-title">Example Card</h5>
+              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
             </div>
           </div>
 
