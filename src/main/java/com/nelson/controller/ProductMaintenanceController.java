@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ProductMaintenanceController {
 
-    @GetMapping("/maintenance")
+    @GetMapping("/servicing")
     public String showMaintenance(){
         return "product-maintenance";
     }

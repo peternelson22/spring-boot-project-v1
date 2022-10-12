@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ProductMovementController {
 
-    @GetMapping("/movement")
+    @GetMapping("/usage")
     public String showMovement(){
         return "product-movement";
     }
