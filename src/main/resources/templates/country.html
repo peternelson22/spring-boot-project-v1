@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>client</title>
+    <title>country</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@
     <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">NiceAdmin</span>
+            <span class="d-none d-lg-block">MaVerick</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -511,8 +511,10 @@
                     <td th:text="${country.description}"></td>
                     <td th:text="${country.nationality}"></td>
                     <td>
-                        <a href="" class="btn btn-info btn-sm text-center">Edit</a>
-                        <a href="" class="btn btn-info btn-sm text-center">Delete</a>
+                        <div class="">
+                            <a th:href="@{country/{id} (id = ${country.id})}" class="btn btn-info btn-sm text-center" data-bs-target="#editCountry" data-bs-toggle="modal">Edit</a>
+                        <a th:href="@{country/delete/{id} (id = ${country.id})}" class="btn btn-info btn-sm text-center">Delete</a>
+                        </div>
                     </td>
                 </tr>
                 </tbody>
@@ -582,6 +584,52 @@
 
     </div>
 </div>
+
+
+<!--<div class="card">-->
+<!--    <div class="card-body">-->
+<!--        <div class="modal fade" tabindex="-1" id="editCountry">-->
+<!--            <div class="modal-dialog modal-dialog-centered">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <h5 class="modal-title">Update Country</h5>-->
+<!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                    </div>-->
+<!--                    <form th:action = "@{country/edit/{id} (id = ${country.id})}">-->
+<!--                        <div class="modal-body">-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="editcapital">Capital</label>-->
+<!--                                <input type="text" class="form-control" id="editcapital" name="capital">-->
+<!--                            </div>-->
+<!--                            <div class="form-group mt-2">-->
+<!--                                <label for="editcode">Code</label>-->
+<!--                                <input type="text" class="form-control" id="editcode" name="code">-->
+<!--                            </div>-->
+<!--                            <div class="form-group mt-2">-->
+<!--                                <label for="editcontinent">Continent</label>-->
+<!--                                <input type="text" class="form-control" id="editcontinent" name="continent">-->
+<!--                            </div>-->
+<!--                            <div class="form-group mt-2">-->
+<!--                                <label for="editdesc">Description</label>-->
+<!--                                <input type="text" class="form-control" id="editdesc" name="description">-->
+<!--                            </div>-->
+<!--                            <div class="form-group mt-2">-->
+<!--                                <label for="editnational">Nationality</label>-->
+<!--                                <input type="text" class="form-control" id="editnational" name="nationality">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="modal-footer">-->
+<!--                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--                            <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>&lt;!&ndash; End Vertically centered Modal&ndash;&gt;-->
+
+<!--    </div>-->
+<!--</div>-->
+
 
 
 <!-- Vendor JS Files -->
